@@ -20,7 +20,7 @@
                                           "/home/hqz/pocopro/include"
                                           ))
     (add-to-list 'company-backends 'company-c-headers)
-    )   
+    )
   )
 
 ;;; clang-format configuration
