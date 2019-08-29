@@ -1,0 +1,27 @@
+#ignore file
+bookmarks
+recentf
+smex-items
+ede-projects.el
+custom.el
+.bookmarks.el
+projectile-bookmarks.eld
+.projectile
+.session
+history
+dired-history
+
+#ignore file by regular
+*~
+*.cache
+
+#ignore directory
+elpa/
+auto-save-list/
+function-args/
+irony/
+rtags/
+semanticdb/
+transient/
+url/
+games/
