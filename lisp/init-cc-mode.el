@@ -35,19 +35,36 @@
   )
 
 (use-package irony
-    :config
-    (progn
-      (add-hook 'c++-mode-hook 'irony-mode)
-      (add-hook 'c-mode-hook 'irony-mode)
-      ;;(add-hook 'objc-mode-hook 'irony-mode)
-      (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-      )
+  :config
+  (progn
+    (add-hook 'c++-mode-hook 'irony-mode)
+    (add-hook 'c-mode-hook 'irony-mode)
+    ;;(add-hook 'objc-mode-hook 'irony-mode)
+    (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
     )
+  )
 
 
 (use-package irony-eldoc
   :config
   (add-hook 'irony-mode-hook #'irony-eldoc)
+  )
+
+(use-package company-irony
+  :after(company)
+  :config
+  (progn
+    (add-to-list 'company-backends 'company-irony)
+    )
+  )
+
+(use-package company-irony-c-headers
+  :after(company)
+  :config
+  (progn
+    (add-to-list
+     'company-backends '(company-irony-c-headers company-irony))
+    )
   )
 
 (use-package flycheck-irony

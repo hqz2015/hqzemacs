@@ -36,6 +36,7 @@
 (require 'init-edit)
 (require 'init-ggtags)
 (require 'init-rtags)
+(require 'init-flycheck)
 (require 'init-python)
 (require 'init-cc-mode)
 (require 'init-org)
