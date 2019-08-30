@@ -76,13 +76,12 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (use-package function-args
-  :load-path "local/function-args"
   :config
   (progn
     (fa-config-default)
     (require 'semantic)
     (set-default 'semantic-case-fold t)
-    (semantic-add-system-include "/home/hqz/software/boost_1_64_0/" 'c++-mode)
+    (semantic-add-system-include "~/software/boost_1_64_0/" 'c++-mode)
     (require 'semantic/bovine/c)
     (add-to-list 'semantic-lex-c-preprocessor-symbol-file
 		 "/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h")
