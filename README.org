@@ -2,9 +2,9 @@
 my personal emacs config for python and c++.
 
 * rtags 安装
-#+BEGIN_SRC 
+#+BEGIN_SRC html
 1. 安装rtags
-[[https://github.com/Andersbakken/rtags/tree/6289e66a69d0d5ff20b12da91e735d3984ad6f88][rtags]]
+<a href="[https://github.com/Andersbakken/rtags/tree/6289e66a69d0d5ff20b12da91e735d3984ad6f88">rtags安装</a>
 
 2.安装bear
 sudo apt-get install bear
