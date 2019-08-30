@@ -1,5 +1,7 @@
 (use-package py-autopep8
   :after (elpy)
+  :init
+  (setq py-autopep8-options '("--max-line-length=160"))
   :config
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
   )
@@ -17,6 +19,8 @@
     (when (require 'flycheck nil t)
       (setq elpy-modules(delq 'elpy-module-flymake elpy-modules))
       (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+    (remove-hook 'elpy-modules 'elpy-module-flymake)
     ))
 
 (use-package company-jedi

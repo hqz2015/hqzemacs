@@ -14,6 +14,7 @@
 
 ;; 高亮当前行
 (global-hl-line-mode t)
+(set-face-background 'hl-line "#3e4446")
 
 (delete-selection-mode 1)
 

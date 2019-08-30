@@ -3,6 +3,7 @@
   (progn
     (add-hook 'after-init-hook 'global-flycheck-mode)
     (setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list)
+    (setq-default flycheck-flake8-maximum-line-length 160)
     )   
   )
 

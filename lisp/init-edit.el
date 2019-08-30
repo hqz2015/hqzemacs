@@ -17,6 +17,11 @@
     )
   )
 
+(use-package nav-flash
+  :config
+  (nav-flash-show)
+  )
+
 (use-package smartparens
   :config
   (progn
@@ -90,7 +95,7 @@
   )
 
 (use-package awesome-pair
-  :load-path "lisp/awesome-pair"
+  :load-path "local/awesome-pair"
   :config
   (progn
     (dolist (hook (list

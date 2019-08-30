@@ -24,6 +24,7 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (defconst *is-a-linux* (eq system-type 'gnu/linux))
 
+(require 'cl)
 (require 'init-general)
 (require 'init-funcs)
 (require 'init-font)
