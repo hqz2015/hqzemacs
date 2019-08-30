@@ -7,7 +7,6 @@
 my personal emacs config for python and c++.
 
 * rtags 安装
-#+BEGIN_SRC
 1. 安装rtags
 [[https://github.com/Andersbakken/rtags/tree/6289e66a69d0d5ff20b12da91e735d3984ad6f88][rtags]]
 
@@ -35,7 +34,5 @@ C-c r .  查找定义
 C-c r ,  查找引用
 C-c r [  回跳
 C-r r ]  前跳
-
-#+END_SRC
 
 
