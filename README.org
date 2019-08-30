@@ -4,15 +4,9 @@ my personal emacs config for python and c++.
 * rtags 安装
 #+BEGIN_SRC 
 1. 安装rtags
-git clone --recursive https://github.com/Andersbakken/rtags.git
-cd rtags
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .
-make
+[[https://github.com/Andersbakken/rtags/tree/6289e66a69d0d5ff20b12da91e735d3984ad6f88][rtags]]
 
-2. 设置rtags-path
-在emacs中设置,M-x customize-group RET rtags
-
-3.安装bear
+2.安装bear
 sudo apt-get install bear
 打bear补丁
 git clone https://github.com/TTimo/Bear.git
@@ -23,12 +17,12 @@ cmake ..
 make 
 sudo make install
 
-4.生成compile_commands.json
+3.生成compile_commands.json
 在项目的根目录执行 
 make clean
 bear make
 
-5.生成database,在项目根目录下执行
+4.生成database,在项目根目录下执行
 rc -J .
 
 6.常用快捷键
@@ -38,4 +32,5 @@ C-c r [  回跳
 C-r r ]  前跳
 
 #+END_SRC
+
 
