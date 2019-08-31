@@ -94,4 +94,37 @@ frames with exactly two windows."
           (select-window first-win)
           (if this-win-2nd (other-window 1))))))
 
+;; modified from windmove-do-window-select
+(defun windmove-do-swap-window (dir &optional arg window)
+  "Move the buffer to the window at direction DIR.
+DIR, ARG, and WINDOW are handled as by `windmove-other-window-loc'.
+If no window is at direction DIR, an error is signaled."
+  (let ((other-window (windmove-find-other-window dir arg window)))
+    (cond ((null other-window)
+           (error "No window %s from selected window" dir))
+          ((and (window-minibuffer-p other-window)
+                (not (minibuffer-window-active-p other-window)))
+           (error "Minibuffer is inactive"))
+          (t
+           (let ( (old-buffer (window-buffer window)) )
+         (set-window-buffer window (window-buffer other-window))
+         (set-window-buffer other-window old-buffer)
+         (select-window other-window))))))
+
+(defun hsb-swap-buffer-up (&optional arg)
+  (interactive "P")
+  (windmove-do-swap-window 'up arg))
+
+(defun hsb-swap-buffer-down (&optional arg)
+  (interactive "P")
+  (windmove-do-swap-window 'down arg))
+
+(defun hsb-swap-buffer-left (&optional arg)
+  (interactive "P")
+  (windmove-do-swap-window 'left arg))
+
+(defun hsb-swap-buffer-right (&optional arg)
+  (interactive "P")
+  (windmove-do-swap-window 'right arg))
+
 (provide 'init-funcs)
