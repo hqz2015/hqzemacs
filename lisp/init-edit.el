@@ -55,6 +55,11 @@
     )
   )
 
+(use-package rainbow-delimiters
+  :config
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+  )
+
 (use-package hungry-delete
   :config
   (global-hungry-delete-mode)
@@ -115,6 +120,18 @@
   (dired-recent-mode 1)
   (define-key dired-recent-mode-map (kbd "C-x C-d") nil)
   (define-key dired-recent-mode-map (kbd "C-x M-d") #'dired-recent-open)
+  )
+
+(use-package imenu-list
+  :bind ("<f3>" . imenu-list)
+  :config
+  (progn
+    (setq imenu-list-focus-after-activation t)
+    (setq imenu-list-auto-resize t)
+    (setq imenu-list-after-jump-hook nil)
+    (add-hook 'imenu-list-after-jump-hook #'recenter-top-bottom)
+    (setq imenu-list-position "below")
+    )
   )
 
 (provide 'init-edit)
