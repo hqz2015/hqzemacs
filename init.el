@@ -29,6 +29,7 @@
 (require 'init-funcs)
 (require 'init-font)
 (require 'init-theme)
+(require 'init-modeline)
 (require 'init-folding)
 (require 'init-ivy)
 (require 'init-projectile)

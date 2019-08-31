@@ -52,5 +52,17 @@
     )   
   )
 
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;;      setup coding system and window property
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(prefer-coding-system 'utf-8)
+(setenv "LANG" "en_US.UTF-8")
+(setenv "LC_ALL" "en_US.UTF-8")
+(setenv "LC_CTYPE" "en_US.UTF-8")
+
+;; setup titlebar appearance
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+
 
 (provide 'init-general)
