@@ -9,11 +9,6 @@
     )
   )
 
-(use-package yasnippet-snippets
-  :config
-  (progn
-    
-    )
-  )
+(use-package yasnippet-snippets)
 
 (provide 'init-yasnippet)

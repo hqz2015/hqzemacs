@@ -10,7 +10,10 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 显示行号
-(global-linum-mode 1)
+;; (global-linum-mode 1)
+;; (setq linum-format "%4d \u2502 ")
+(global-display-line-numbers-mode 1)
+(setq-default display-line-numbers-width nil)
 
 ;; 高亮当前行
 (global-hl-line-mode t)
@@ -27,6 +30,9 @@
 
 (add-hook 'after-init-hook 'global-auto-revert-mode)
 (add-hook 'after-init-hook 'show-paren-mode)
+
+;;; 设置mark的背景颜色
+(set-face-attribute 'region nil :background "gray")
 
 ;; emacs平滑滚动
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 4) ((control) . nil)))

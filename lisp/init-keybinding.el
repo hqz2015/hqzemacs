@@ -7,6 +7,7 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (global-set-key (kbd "C-a") 'prelude-move-beginning-of-line)
 (global-set-key (kbd "C-<f2>") 'toggle-window-split)
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
 
 
 (provide 'init-keybinding)

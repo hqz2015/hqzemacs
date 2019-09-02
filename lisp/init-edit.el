@@ -123,14 +123,13 @@
   )
 
 (use-package imenu-list
-  :bind ("<f3>" . imenu-list)
   :config
   (progn
     (setq imenu-list-focus-after-activation t)
     (setq imenu-list-auto-resize t)
     (setq imenu-list-after-jump-hook nil)
     (add-hook 'imenu-list-after-jump-hook #'recenter-top-bottom)
-    (setq imenu-list-position "below")
+    (setq imenu-list-position "above")
     )
   )
 
@@ -141,5 +140,10 @@
     (setq undo-tree-visualizer-timestamps t)
     (setq undo-tree-visualizer-diff t)
     ))
+
+(use-package hlinum
+  :config
+  (hlinum-activate)
+  )
 
 (provide 'init-edit)
