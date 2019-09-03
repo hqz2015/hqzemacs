@@ -96,4 +96,10 @@
     )
   )
 
+;; (global-ede-mode 1)
+;; (ede-cpp-root-project "my project" :file "~/projects/hqz_file_transfer/src/server.cpp"
+;; 		      :include-path '("/../inc"))
+
+;; (global-semantic-idle-scheduler-mode 1)
+
 (provide 'init-cc-mode)

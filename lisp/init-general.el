@@ -10,10 +10,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 显示行号
-;; (global-linum-mode 1)
-;; (setq linum-format "%4d \u2502 ")
 (global-display-line-numbers-mode 1)
-(setq-default display-line-numbers-width nil)
 
 ;; 高亮当前行
 (global-hl-line-mode t)

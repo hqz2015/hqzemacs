@@ -129,7 +129,7 @@
     (setq imenu-list-auto-resize t)
     (setq imenu-list-after-jump-hook nil)
     (add-hook 'imenu-list-after-jump-hook #'recenter-top-bottom)
-    (setq imenu-list-position "above")
+    (setq imenu-list-position 'left)
     )
   )
 
