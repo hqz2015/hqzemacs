@@ -39,4 +39,7 @@
     )
   )
 
+(setenv "WORKON_HOME" "/home/hqz/.emacs.d")
+(pyvenv-activate "/home/hqz/.emacs.d/ENV2.7")
+
 (provide 'init-python)
